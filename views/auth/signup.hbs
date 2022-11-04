@@ -1,0 +1,49 @@
+{{#each errors}}
+{{this.msg}}
+{{/each}}
+
+{{#if todo_error}}
+{{todo_error}}
+{{/if}}
+
+<div class="container is-fluid" style="margin: 1rem auto;">
+    <form action="/auth/signup" method="POST">
+        {{!-- Name --}}
+        <div class="field">
+            <label for="name" class="label white">Nombre</label>
+            <input type="text" class="input" id="name" name="name" placeholder="Ingrese su nombre" value="{{name}}">
+        </div>
+
+        {{!-- Mail --}}
+        <div class="field">
+            <label for="email" class="label white">Correo Electronico</label>
+            <input type="email" class="input" id="email" name="email" placeholder="Ingrese su correo electronico Ej: name@example.com" value="{{email}}">
+        </div>
+
+        {{!-- Password --}}
+        <div class="field">
+            <label for="password" class="label white">Constraseña</label>
+            <input type="password" class="input" id="password" name="password" placeholder="Ingrese su contraseña">
+        </div>
+
+        {{!-- Confirm Password --}}
+        <div class="field">
+            <label for="confirm_password" class="label white">Confirme su contraseña</label>
+            <input type="password" class="input" id="confirm_password" name="confirm_password"
+                placeholder="Confirme su contraseña">
+        </div>
+
+        <div class="field is-grouped is-grouped-centered">
+            <p class="control">
+                <button class="button is-primary" type="submit">
+                    Registrarse
+                </button>
+            </p>
+            <p class="control">
+                <a class="button is-danger" href="/">
+                    Cancelar
+                </a>
+            </p>
+        </div>
+    </form>
+</div>

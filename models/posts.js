@@ -11,6 +11,14 @@ const postSchema = new mongoose.Schema(
             type: String,
             required: true
         },
+        user: {
+            type: String,
+            require: true
+        },
+        name: {
+            type: String,
+            require: true
+        },
         slug: {
             type: String,
             required: true,
@@ -23,12 +31,9 @@ const postSchema = new mongoose.Schema(
 )
 
 // Middleware .pre()
-// TODO: Llevar este middleware a un archivo separado
 postSchema.pre('validate', function(next){
     if(this.title) {
         this.slug = slugify(this.title, {lower: true, strict: true})
-        // title: "Pepito esta re loco"
-        // slug: "Pepito-esta-re-loco"
     }
     next()
 })

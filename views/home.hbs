@@ -1,0 +1,13 @@
+{{#each posts}}
+<div class="container is-fluid">
+    <div class="card">
+        <div class="media-content" style="padding: 1rem; margin: 1rem auto;">
+            <p class="title is-4 white">{{this.title}}</p>
+            <p class="subtitle is-6 white">@{{this.name}}</p>
+            <p class="content">{{this.body}}</p>
+            <a href="#" class="button is-info">Ver más</a>
+            {{!-- Armar ruta de Ver Más --}}
+        </div>
+    </div>
+</div>
+{{/each}}

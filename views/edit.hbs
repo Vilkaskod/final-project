@@ -1,0 +1,18 @@
+<div class="col" style="margin: 1rem auto;">
+    <h2 class="title white">Editar Post</h2>
+
+    <form action="/posts/{{post._id}}?_method=PUT" method="POST">
+
+        <div class="field">
+            <label for="title" class="label white">Título</label>
+            <input type="text" class="input" id="title" name="title" value="{{post.title}}">
+        </div>
+
+        <div class="field">
+            <label for="body" class="label white">Cuerpo</label>
+            <textarea type="text" class="input" id="body" name="body">{{post.body}}</textarea>
+        </div>
+
+        <button class="button is-primary" type="submit">Enviar</button>
+    </form>
+</div>

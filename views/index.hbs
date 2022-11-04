@@ -1,0 +1,35 @@
+<div class="" style="margin: 1rem auto;">
+  <h2 class="title white">Listado de Post</h2>
+
+  <hr>
+  <a href="/posts/new" class="button is-info">Crear Post</a>
+  <hr>
+
+  <table class="table is-fullwidth" style="background-color: #112835;">
+    <thead>
+      <tr>
+        <th style="width: 24rem; color:white;">Titulo</th>
+        <th style="width: 32rem; color:white;">Post</th>
+        <th style="width: 24rem; color:white;">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      {{#each posts}}
+      <tr class="table" style="background-color: #27678b;">
+        <td class="white">{{this.title}}</td>
+        <td class="white">{{this.body}}</td>
+        <td>
+     
+          <a class="button is-primary" href="/posts/{{this.slug}}">Ver</a>
+          <a href="/posts/edit/{{this._id}}" class="button is-info">Editar</a>
+
+          <form action="/posts/{{this._id}}?_method=DELETE" method="POST">
+            <button class="button is-danger" style="margin: 0.4rem;">Eliminar</button>
+          </form>
+     
+        </td>
+      </tr>
+      {{/each}}
+    </tbody>
+  </table>
+</div>

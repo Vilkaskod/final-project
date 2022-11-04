@@ -35,3 +35,33 @@ npm i mongoose
 ```sh
 npm i express-handlebars
 ```
+
+## Sessions
+<https://www.npmjs.com/package/express-session>
+
+```sh
+npm i express-session
+```
+
+## PassPort
+<https://www.passportjs.org/>
+
+```sh
+npm install passport-local
+```
+
+## Connect Mongo
+(Conexión para persistir información en MONGO)
+<https://www.npmjs.com/package/connect-mongo>
+
+```sh
+npm i connect-mongo
+```
+
+## Connect Flash
+
+<https://www.npmjs.com/package/connect-flash>
+
+```sh
+npm i connect-flash
+```

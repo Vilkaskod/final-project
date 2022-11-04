@@ -5,6 +5,7 @@ const generatePost = () => {
 
     const post = {
         title: faker.lorem.words(6),
+        name: faker.name.firstName(),
         body: faker.lorem.sentence(),
     }
 

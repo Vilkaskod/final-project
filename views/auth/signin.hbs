@@ -1,0 +1,33 @@
+{{#if todo_ok}}
+<div class="notification is-success">
+    <button class="delete"></button>
+    {{todo_ok}}
+</div>
+{{/if}}
+
+{{#if error}}
+  <div class="notification is-danger">
+    <button class="delete"></button>
+    <strong>{{error}}</strong>
+  </div>
+{{/if}}
+
+<div class="container is-fluid" style="margin: 1rem auto;">
+    <form action="/auth/signin" method="POST">
+        {{!-- Name --}}
+        <div class="field">
+            <label for="email" class="label white">Correo Electronico</label>
+            <input type="text" class="input" id="email" name="email" placeholder="Ingrese su correo electronico">
+        </div>
+
+        {{!-- Password --}}
+        <div class="field">
+            <label for="password" class="label white">Constraseña</label>
+            <input type="password" class="input" id="password" name="password" placeholder="Ingrese su contraseña">
+        </div>
+
+         <button class="button is-info" type="submit">
+            Ingresar
+        </button>
+    </form>
+</div>
